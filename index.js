@@ -113,3 +113,29 @@ if(lulusUjian && lulusAbsen){
 }else{
     console.log('TIDAK WISUDA')
 }
+
+const wisuda3 = lulusUjian && lulusAbsen ? 'WISUDA' : lulusUjian || lulusAbsen ? 'WISUDA SANTAI' : 'TIDAK WISUDA'
+console.log('HASIL WISUDA : ', wisuda3)
+
+const foods = [
+    {
+        dataId: 1,
+        rasa: 'Manis',
+        warna: 'Merah',
+        bentuk: 'bulat'
+    },
+
+    {
+        dataId: 2,
+        rasa: 'Asam',
+        warna: 'Kuning',
+        bentuk: 'Kotak'
+    },
+
+    {
+        dataId: 3,
+        rasa: 'Pedas',
+        warna: 'Merah',
+        bentuk: 'Panjang'
+    }
+]
