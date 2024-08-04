@@ -156,39 +156,73 @@ foods.forEach(food => {
 //DECLARATION
 
 function login(nama, email, password){
-    document.writeln(`Nama: ${nama}, Email: ${email}, Password: ${password}`)
+    console.log(`Nama: ${nama}, Email: ${email}, Password: ${password}`)
 }
 login('Dwi', 'dw.pamungkas@gmail.com', '1234')
 
 //SAMPEL REAL LOGIN FUNCTION
-function login(name, email, password) {
-    if (!name || !email || !password) {
-        console.log("All fields are required.");
-        return;
-    }
+// function login(name, email, password) {
+//     if (!name || !email || !password) {
+//         console.log("All fields are required.");
+//         return;
+//     }
 
-    const userData = { name, email, password };
+//     const userData = { name, email, password };
 
-    fetch('https://your-api-endpoint.com/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(userData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            console.log("Login successful!");
-            // Handle successful login
-        } else {
-            console.log("Login failed: " + data.message);
-        }
-    })
-    .catch(error => {
-        console.error("An error occurred during login:", error);
-    });
+//     fetch('https://reqres.in/api/login', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(userData)
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         if (data.success) {
+//             console.log("Login successful!");
+//             // Handle successful login
+//         } else {
+//             console.log("Login failed: " + data.message);
+//         }
+//     })
+//     .catch(error => {
+//         console.error("An error occurred during login:", error);
+//     });
+// }
+
+// // Usage
+// login("John Doe", "test@example.com", "password123");
+
+
+//EXPRESSION
+//NILAI
+const nilaiUjian2 = 65
+const nilaiAbsen2 = 70
+
+//SYARAT LULUS
+const lulusUjian2 = nilaiUjian2 >= 70
+const lulusAbsen2 = nilaiAbsen2 >= 80
+
+function report3(lulusUjian2, lulusAbsen2){
+    const wisuda3 = lulusUjian2 && lulusAbsen2 ? 'WISUDA' : lulusUjian2 || lulusAbsen2 ? 'WISUDA SANTAI' : 'TIDAK WISUDA'
+    return wisuda3
+    //console.log(wisuda3)
 }
+console.log(report3(lulusUjian2, lulusAbsen2))
+//report3(nilaiUjian2, nilaiAbsen2)
 
-// Usage
-login("John Doe", "test@example.com", "password123");
+
+const report = function(lulusUjian2, lulusAbsen2){
+    const wisuda3 = lulusUjian2 && lulusAbsen2 ? 'WISUDA' : lulusUjian2 || lulusAbsen2 ? 'WISUDA SANTAI' : 'TIDAK WISUDA'
+    return wisuda3
+}
+console.log(report(lulusUjian2, lulusAbsen2))
+
+
+
+//EXPRESSION ARROW
+const report2 = (lulusUjian2, lulusAbsen2) => {
+    const wisuda3 = lulusUjian2 && lulusAbsen2 ? 'WISUDA' : lulusUjian2 || lulusAbsen2 ? 'WISUDA SANTAI' : 'TIDAK WISUDA'
+    return wisuda3
+}
+console.log(report2(lulusUjian2, lulusAbsen2))
